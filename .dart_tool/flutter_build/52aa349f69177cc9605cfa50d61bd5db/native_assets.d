@@ -1,0 +1,1 @@
+ E:\\belajar\\kkp\\frontend-mobile-app\\.dart_tool\\flutter_build\\52aa349f69177cc9605cfa50d61bd5db\\native_assets.yaml: 

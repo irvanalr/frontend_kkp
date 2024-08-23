@@ -1,0 +1,12 @@
+dev.flutter.integration_test-core-1.6.0-0 C:\Users\irvan\.gradle\caches\transforms-3\284a410c767ad6c7a2b0ffc8d8d85981\transformed\core-1.6.0\res
+dev.flutter.integration_test-jetified-window-java-1.0.0-beta04-1 C:\Users\irvan\.gradle\caches\transforms-3\2a215381204751055df81b6269e717b7\transformed\jetified-window-java-1.0.0-beta04\res
+dev.flutter.integration_test-jetified-annotation-experimental-1.1.0-2 C:\Users\irvan\.gradle\caches\transforms-3\3d2f03fc996c2e0aa3dee5cfa3002cd1\transformed\jetified-annotation-experimental-1.1.0\res
+dev.flutter.integration_test-jetified-window-1.0.0-beta04-3 C:\Users\irvan\.gradle\caches\transforms-3\f302e75fb7efd781bcf1a29281c188da\transformed\jetified-window-1.0.0-beta04\res
+dev.flutter.integration_test-pngs-4 E:\belajar\kkp\frontend-mobile-app\build\integration_test\generated\res\pngs\release
+dev.flutter.integration_test-resValues-5 E:\belajar\kkp\frontend-mobile-app\build\integration_test\generated\res\resValues\release
+dev.flutter.integration_test-rs-6 E:\belajar\kkp\frontend-mobile-app\build\integration_test\generated\res\rs\release
+dev.flutter.integration_test-mergeReleaseResources-7 E:\belajar\kkp\frontend-mobile-app\build\integration_test\intermediates\incremental\release\mergeReleaseResources\merged.dir
+dev.flutter.integration_test-mergeReleaseResources-8 E:\belajar\kkp\frontend-mobile-app\build\integration_test\intermediates\incremental\release\mergeReleaseResources\stripped.dir
+dev.flutter.integration_test-merged_res-9 E:\belajar\kkp\frontend-mobile-app\build\integration_test\intermediates\merged_res\release
+dev.flutter.integration_test-main-10 G:\flutter_windows_3.22.2-stable\flutter\packages\integration_test\android\src\main\res
+dev.flutter.integration_test-release-11 G:\flutter_windows_3.22.2-stable\flutter\packages\integration_test\android\src\release\res

@@ -1,0 +1,25 @@
+-- Merging decision tree log ---
+manifest
+ADDED from G:\flutter_windows_3.24.0-stable\flutter\packages\integration_test\android\src\main\AndroidManifest.xml:5:1-7:12
+INJECTED from G:\flutter_windows_3.24.0-stable\flutter\packages\integration_test\android\src\main\AndroidManifest.xml:5:1-7:12
+INJECTED from G:\flutter_windows_3.24.0-stable\flutter\packages\integration_test\android\src\main\AndroidManifest.xml:5:1-7:12
+	package
+		ADDED from G:\flutter_windows_3.24.0-stable\flutter\packages\integration_test\android\src\main\AndroidManifest.xml:6:5-43
+		INJECTED from G:\flutter_windows_3.24.0-stable\flutter\packages\integration_test\android\src\main\AndroidManifest.xml
+		INJECTED from G:\flutter_windows_3.24.0-stable\flutter\packages\integration_test\android\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from G:\flutter_windows_3.24.0-stable\flutter\packages\integration_test\android\src\main\AndroidManifest.xml:5:11-69
+uses-sdk
+INJECTED from G:\flutter_windows_3.24.0-stable\flutter\packages\integration_test\android\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from G:\flutter_windows_3.24.0-stable\flutter\packages\integration_test\android\src\main\AndroidManifest.xml
+INJECTED from G:\flutter_windows_3.24.0-stable\flutter\packages\integration_test\android\src\main\AndroidManifest.xml
+INJECTED from G:\flutter_windows_3.24.0-stable\flutter\packages\integration_test\android\src\main\AndroidManifest.xml
+INJECTED from G:\flutter_windows_3.24.0-stable\flutter\packages\integration_test\android\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from G:\flutter_windows_3.24.0-stable\flutter\packages\integration_test\android\src\main\AndroidManifest.xml
+		ADDED from G:\flutter_windows_3.24.0-stable\flutter\packages\integration_test\android\src\main\AndroidManifest.xml
+		INJECTED from G:\flutter_windows_3.24.0-stable\flutter\packages\integration_test\android\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from G:\flutter_windows_3.24.0-stable\flutter\packages\integration_test\android\src\main\AndroidManifest.xml
+		ADDED from G:\flutter_windows_3.24.0-stable\flutter\packages\integration_test\android\src\main\AndroidManifest.xml
+		INJECTED from G:\flutter_windows_3.24.0-stable\flutter\packages\integration_test\android\src\main\AndroidManifest.xml
