@@ -4,98 +4,135 @@ import 'package:febankflutter/api/api_mock.dart';
 import 'package:febankflutter/viewmodels/beranda_view_model.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_test/flutter_test.dart';
-// import 'package:logger/logger.dart';
+import 'package:logger/logger.dart';
 import 'package:mockito/mockito.dart';
 import 'package:http/http.dart' as http;
 import '../mocking/http_client_mock.mocks.dart';
 
 void main() async {
   await dotenv.load(fileName: ".env");
-  // final logger = Logger();
+  final logger = Logger();
 
   group('berandaViewModel formatValuetoRupiah', () {
-    group('formatValuetoRupiah', () {
-      test('Seharusnya menformat tipe data double menjadi format rupiah', () {
-        // atur (arrange)
-        double value = 1234567890.12;
-        String expectedResult = '1.234.567.890,12';
-        final berandaViewModel = BerandaViewModel(notifyListeners: () {});
 
-        // aksi (act)
-        String result = berandaViewModel.formatValuetoRupiah(value);
+    test('Seharusnya menformat tipe data double menjadi format rupiah', () {
+      logger.i('Menjalankan Seharusnya menformat tipe data double menjadi format rupiah');
 
-        // tegaskan (assert)
-        expect(result, expectedResult);
-      });
+      // atur (arrange)
+      double value = 1234567890.12;
+      String expectedResult = '1.234.567.890,12';
+      logger.i('Berhasil membuat variabel value dan expectedResult');
 
-      test('Seharusnya mengembalikan 0 jika inputnya adalah null', () {
-        // atur (arrange)
-        double? value = null;
-        String expectedResult = '0';
-        final berandaViewModel = BerandaViewModel(notifyListeners: () {});
+      final berandaViewModel = BerandaViewModel(notifyListeners: () {});
+      logger.i('Berhasil membuat instance berandaViewModel');
 
-        // aksi (act)
-        String result = berandaViewModel.formatValuetoRupiah(value);
+      // aksi (act)
+      String result = berandaViewModel.formatValuetoRupiah(value);
+      logger.i('Berhasil menyimpan kembalian dari function formatValueToRupiah');
 
-        // tegaskan (assert)
-        expect(result, expectedResult);
-      });
+      // tegaskan (assert)
+      expect(result, expectedResult);
+      logger.i('Berhasil membuat tipe data double menjadi berformat rupiah $result}');
 
-      test(
-          'Jika memasukan input tanpa koma pada tipe data double, akan mengembalikan double',
-          () {
-        // atur (arrange)
-        double value = 1234567890;
-        String expectedResult = '1.234.567.890,0';
-        final berandaViewModel = BerandaViewModel(notifyListeners: () {});
+    });
 
-        // aksi (act)
-        String result = berandaViewModel.formatValuetoRupiah(value);
+    test('Seharusnya mengembalikan 0 jika inputnya adalah null', () {
+      logger.i('Menjalankan Seharusnya mengembalikan 0 jika inputnya adalah null');
 
-        // tegaskan (assert)
-        expect(result, expectedResult);
-      });
+      // atur (arrange)
+      double? value;
+      String expectedResult = '0';
+      logger.i('Berhasil membuat variabel value dan expectedResult');
 
-      test('Seharusnya menjadikan format terkecil dari nilai rupiah', () {
-        // atur (arrange)
-        double value = 1234.56;
-        String expectedResult = '1.234,56';
-        final berandaViewModel = BerandaViewModel(notifyListeners: () {});
+      final berandaViewModel = BerandaViewModel(notifyListeners: () {});
+      logger.i('Berhasil membuat instance berandaViewModel');
 
-        // aksi (act)
-        String result = berandaViewModel.formatValuetoRupiah(value);
+      // aksi (act)
+      String result = berandaViewModel.formatValuetoRupiah(value);
+      logger.i('Berhasil menyimpan kembalian dari function formatValueToRupiah');
 
-        // tegaskan (assert)
-        expect(result, expectedResult);
-      });
+      // tegaskan (assert)
+      expect(result, expectedResult);
+      logger.i('Berhasil mendapatkan angka 0 jika di isikan null : $result');
+    });
 
-      test('Seharusnya menjadikan format terbesar dari nilai rupiah', () {
-        // atur (arrange)
-        double value = 123456789012345.67;
-        String expectedResult = '123.456.789.012.345,67';
-        final berandaViewModel = BerandaViewModel(notifyListeners: () {});
+    test('Jika memasukan input tanpa koma pada tipe data double, akan mengembalikan double dengan koma', () {
+      logger.i('Menjalankan Jika memasukan input tanpa koma pada tipe data double, akan mengembalikan double dengan koma');
 
-        // aksi (act)
-        String result = berandaViewModel.formatValuetoRupiah(value);
+      // atur (arrange)
+      double value = 1234567890;
+      String expectedResult = '1.234.567.890,0';
+      logger.i('Berhasil membuat variabel value dan expectedResult');
 
-        // tegaskan (assert)
-        expect(result, expectedResult);
-      });
+      final berandaViewModel = BerandaViewModel(notifyListeners: () {});
+      logger.i('Berhasil membuat instance berandaViewModel');
 
-      test(
-          'Seharusnya mengembalikan In.fin.ity jika tipe data nya inputnya adalah double.infinity',
-          () {
-        // atur (arrange)
-        String expectedResult = 'In.fin.ity';
-        final berandaViewModel = BerandaViewModel(notifyListeners: () {});
+      // aksi (act)
+      String result = berandaViewModel.formatValuetoRupiah(value);
+      logger.i('Berhasil menyimpan kembalian dari function formatValueToRupiah');
 
-        // aksi (act)
-        String result = berandaViewModel.formatValuetoRupiah(
-            double.infinity); // Using infinity to force an error
+      // tegaskan (assert)
+      expect(result, expectedResult);
+      logger.i('Berhasil memverifikasi result $result');
+    });
 
-        // tegaskan (assert)
-        expect(result, expectedResult);
-      });
+    test('Seharusnya menjadikan format terkecil dari nilai rupiah', () {
+      logger.i('Menjalankan Seharusnya menjadikan format terkecil dari nilai rupiah');
+
+      // atur (arrange)
+      double value = 1234.56;
+      String expectedResult = '1.234,56';
+      logger.i('Berhasil membuat variabel value dan expectedResult');
+
+      final berandaViewModel = BerandaViewModel(notifyListeners: () {});
+      logger.i('Berhasil membuat instance berandaViewModel');
+
+      // aksi (act)
+      String result = berandaViewModel.formatValuetoRupiah(value);
+      logger.i('Berhasil menyimpan kembalian dari formatValueToRupiah');
+
+      // tegaskan (assert)
+      expect(result, expectedResult);
+      logger.i('Berhasil memverifikasi result : $result');
+    });
+
+    test('Seharusnya menjadikan format terbesar dari nilai rupiah', () {
+      logger.i('Menjalanakan Seharusnya menjadikan format terbesar dari nilai rupiah');
+
+      // atur (arrange)
+      double value = 1.7976931348623157E+308;
+      String expectedResult = '1,7976931348623157e+308';
+      logger.i('Berhasil membuat variabel value dan expectedResult');
+
+      final berandaViewModel = BerandaViewModel(notifyListeners: () {});
+      logger.i('Berhasil membuat instance berandaViewModel');
+
+      // aksi (act)
+      String result = berandaViewModel.formatValuetoRupiah(value);
+      logger.i('Berhasil menyimpan value dari function formatValueToRupiah');
+
+      // tegaskan (assert)
+      expect(result, expectedResult);
+      logger.i('Berhasil memverifikasi result : $result');
+    });
+
+    test('Seharusnya mengembalikan In.fin.ity jika tipe data nya inputnya adalah double.infinity', () {
+      logger.i('Menjalankan Seharusnya mengembalikan In.fin.ity jika tipe data nya inputnya adalah double.infinity');
+
+      // atur (arrange)
+      String expectedResult = 'In.fin.ity';
+      logger.i('Berhasil membuat variabel expectedResult');
+
+      final berandaViewModel = BerandaViewModel(notifyListeners: () {});
+      logger.i('Berhasil membuat instance berandaViewModel');
+
+      // aksi (act)
+      String result = berandaViewModel.formatValuetoRupiah(double.infinity);
+      logger.i('Berhasil menyimpan kembalian dari function formatValueToRupiah');
+
+      // tegaskan (assert)
+      expect(result, expectedResult);
+      logger.i('Berhasil memverifikasi result : $result');
     });
   });
 
@@ -110,7 +147,9 @@ void main() async {
       apiMock = ApiMock(client: mockClient);
     });
 
-    test('berandaCardInformasiRekeningUtama', () async {
+    test('berandaCardInformasiRekeningUtama response berhasil', () async {
+      logger.i('Menjalankan berandaCardInformasiRekeningUtama response berhasil');
+
       // atur (arrange) getApiKey
       when(mockClient.get(
         Uri.parse('$baseUrl/api-key'),
@@ -122,6 +161,7 @@ void main() async {
       )).thenAnswer((_) async => http.Response(
           '{"timestamp": "2024-08-09T06:32:48.701Z", "status": 1, "message": "SUCCESS", "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbkxvZ2luIjoiYVhKMllXND0iLCJpYXQiOjE3MjMxOTA4MDEsImV4cCI6MTcyMzc5NTYwMX0.cOOAq8Wuw2l7iFsfLcoGpM5uDqjQVnK-NPR7Mn2lNxY"}',
           200));
+      logger.i('Berhasil menjalankan mock getApiKey status 200');
 
       // atur (arrange) userLogin
       when(mockClient.post(
@@ -137,35 +177,100 @@ void main() async {
       )).thenAnswer((_) async => http.Response(
           '{"timestamp": "2024-08-09T06:32:48.701Z", "status": 1, "message": "Login berhasil", "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbkxvZ2luIjoiYVhKMllXND0iLCJpYXQiOjE3MjMxOTA4MDEsImV4cCI6MTcyMzc5NTYwMX0.cOOAq8Wuw2l7iFsfLcoGpM5uDqjQVnK-NPR7Mn2lNxY"}',
           200));
+      logger.i('Berhasil menjalankan mock userLogin status 200');
 
       // atur (arrange) userLogout
       when(mockClient.get(
-        Uri.parse('$baseUrl/user/rekening-utama'),
+        Uri.parse('$baseUrl/user/rekening-utama/irvan'),
         headers: {
           'mobile-app': 'mobile-application',
           'Content-Type': 'application/json',
           'Accept': 'application/json',
           'Authorization':
-              'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbkxvZ2luIjoiYVhKMllXND0iLCJpYXQiOjE3MjMxOTA4MDEsImV4cCI6MTcyMzc5NTYwMX0.cOOAq8Wuw2l7iFsfLcoGpM5uDqjQVnK-NPR7Mn2lNxY',
+          'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbkxvZ2luIjoiYVhKMllXND0iLCJpYXQiOjE3MjMxOTA4MDEsImV4cCI6MTcyMzc5NTYwMX0.cOOAq8Wuw2l7iFsfLcoGpM5uDqjQVnK-NPR7Mn2lNxY',
           'mobile-credential':
-              'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbkxvZ2luIjoiYVhKMllXND0iLCJpYXQiOjE3MjMxOTA4MDEsImV4cCI6MTcyMzc5NTYwMX0.cOOAq8Wuw2l7iFsfLcoGpM5uDqjQVnK-NPR7Mn2lNxY',
+          'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbkxvZ2luIjoiYVhKMllXND0iLCJpYXQiOjE3MjMxOTA4MDEsImV4cCI6MTcyMzc5NTYwMX0.cOOAq8Wuw2l7iFsfLcoGpM5uDqjQVnK-NPR7Mn2lNxY',
         },
       )).thenAnswer((_) async => http.Response(
-          '{    "timestamp": "2024-08-09T13:41:12.196Z", "status": 1, "message": "Success rekening utama", "registration": "2024-07-22", "prouctname": "TABUNGAN SIMPATI", "code": "116 04 5063", "name": "Irvan Al Rasyid", "balance": 4209596}',
+          '{    "timestamp": "2024-08-09T13:41:12.196Z", "status": 1, "message": "Success rekening utama", "registration": "2024-07-22", "productName": "TABUNGAN SIMPATI", "code": "116 04 5063", "name": "Irvan Al Rasyid", "balance": "4209596.00"}',
           200));
+      logger.i('Berhasil menjalankan mock rekeningUtama');
 
       // aksi (act)
-      final data = await apiMock.rekeningUtama();
+      final data = await apiMock.rekeningUtama('irvan');
+      logger.i('Berhasil menyimpan kembalian dari api_mock.dart rekeningUtama');
+      logger.i(data);
 
       // tegaskan (assert)
       expect(data['timestamp'], '2024-08-09T13:41:12.196Z');
       expect(data['status'], 1);
       expect(data['message'], 'Success rekening utama');
       expect(data['registration'], '2024-07-22');
-      expect(data['prouctname'], 'TABUNGAN SIMPATI');
+      expect(data['productName'], 'TABUNGAN SIMPATI');
       expect(data['code'], '116 04 5063');
       expect(data['name'], 'Irvan Al Rasyid');
-      expect(data['balance'], 4209596);
+      expect(data['balance'], "4209596.00");
+      logger.i('Berhasil memverifikasi data dengan hasil mock rekeningUtama');
+    });
+
+    test('berandaCardInformasiRekeningUtama response gagal', () async {
+      logger.i('Menjalankan berandaCardInformasiRekeningUtama response gagal');
+
+      // atur (arrange) getApiKey
+      when(mockClient.get(
+        Uri.parse('$baseUrl/api-key'),
+        headers: {
+          'mobile-app': 'mobile-application',
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+      )).thenAnswer((_) async => http.Response(
+          '{"timestamp": "2024-08-09T06:32:48.701Z", "status": 1, "message": "SUCCESS", "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbkxvZ2luIjoiYVhKMllXND0iLCJpYXQiOjE3MjMxOTA4MDEsImV4cCI6MTcyMzc5NTYwMX0.cOOAq8Wuw2l7iFsfLcoGpM5uDqjQVnK-NPR7Mn2lNxY"}',
+          200));
+      logger.i('Berhasil menjalankan mock getApiKey status 200');
+
+      // atur (arrange) userLogin
+      when(mockClient.post(
+        Uri.parse('$baseUrl/auth/login'),
+        headers: {
+          'mobile-app': 'mobile-application',
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+          'Authorization':
+          'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbkxvZ2luIjoiYVhKMllXND0iLCJpYXQiOjE3MjMxOTA4MDEsImV4cCI6MTcyMzc5NTYwMX0.cOOAq8Wuw2l7iFsfLcoGpM5uDqjQVnK-NPR7Mn2lNxY',
+        },
+        body: jsonEncode({'username': 'irvan', 'password': 'irvan123'}),
+      )).thenAnswer((_) async => http.Response(
+          '{"timestamp": "2024-08-09T06:32:48.701Z", "status": 1, "message": "Login berhasil", "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbkxvZ2luIjoiYVhKMllXND0iLCJpYXQiOjE3MjMxOTA4MDEsImV4cCI6MTcyMzc5NTYwMX0.cOOAq8Wuw2l7iFsfLcoGpM5uDqjQVnK-NPR7Mn2lNxY"}',
+          200));
+      logger.i('Berhasil menjalankan mock userLogin status 200');
+
+      // atur (arrange) userLogout
+      when(mockClient.get(
+        Uri.parse('$baseUrl/user/rekening-utama/irvan'),
+        headers: {
+          'mobile-app': 'mobile-application',
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+          'Authorization':
+          'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbkxvZ2luIjoiYVhKMllXND0iLCJpYXQiOjE3MjMxOTA4MDEsImV4cCI6MTcyMzc5NTYwMX0.cOOAq8Wuw2l7iFsfLcoGpM5uDqjQVnK-NPR7Mn2lNxY',
+          'mobile-credential':
+          'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbkxvZ2luIjoiYVhKMllXND0iLCJpYXQiOjE3MjMxOTA4MDEsImV4cCI6MTcyMzc5NTYwMX0.cOOAq8Wuw2l7iFsfLcoGpM5uDqjQVnK-NPR7Mn2lNxY',
+        },
+      )).thenAnswer((_) async => http.Response(
+          '{    "timestamp": "2024-08-09T13:41:12.196Z", "status": 0, "message": "SERVER MENGALAMI GANGGUAN, SILAHKAN COBA LAGI NANTI !!!"}',
+          500));
+      logger.i('Berhasil menjalankan mock rekeningUtama');
+
+      // aksi (act)
+      final data = await apiMock.rekeningUtama('irvan');
+      logger.i('Berhasil menyimpan kembalian dari api_mock.dart rekeningUtama');
+      logger.i(data);
+
+      // tegaskan (assert)
+      expect(data['timestamp'], '2024-08-09T13:41:12.196Z');
+      expect(data['status'], 0);
+      expect(data['message'], 'SERVER MENGALAMI GANGGUAN, SILAHKAN COBA LAGI NANTI !!!');
     });
   });
 }

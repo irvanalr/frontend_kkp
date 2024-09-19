@@ -13,23 +13,23 @@
 13         to allow setting breakpoints, to provide hot reload, etc.
 14    -->
 15    <uses-permission android:name="android.permission.INTERNET" />
-15-->E:\belajar\kkp\frontend-mobile-app\android\app\src\main\AndroidManifest.xml:2:5-67
-15-->E:\belajar\kkp\frontend-mobile-app\android\app\src\main\AndroidManifest.xml:2:22-64
+15-->E:\belajar\kkp_program\frontend_kkp\android\app\src\main\AndroidManifest.xml:2:5-67
+15-->E:\belajar\kkp_program\frontend_kkp\android\app\src\main\AndroidManifest.xml:2:22-64
 16    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
-16-->E:\belajar\kkp\frontend-mobile-app\android\app\src\main\AndroidManifest.xml:6:5-72
-16-->E:\belajar\kkp\frontend-mobile-app\android\app\src\main\AndroidManifest.xml:6:22-69
+16-->E:\belajar\kkp_program\frontend_kkp\android\app\src\main\AndroidManifest.xml:6:5-72
+16-->E:\belajar\kkp_program\frontend_kkp\android\app\src\main\AndroidManifest.xml:6:22-69
 17    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
-17-->E:\belajar\kkp\frontend-mobile-app\android\app\src\main\AndroidManifest.xml:7:5-74
-17-->E:\belajar\kkp\frontend-mobile-app\android\app\src\main\AndroidManifest.xml:7:22-71
+17-->E:\belajar\kkp_program\frontend_kkp\android\app\src\main\AndroidManifest.xml:7:5-74
+17-->E:\belajar\kkp_program\frontend_kkp\android\app\src\main\AndroidManifest.xml:7:22-71
 18    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-18-->E:\belajar\kkp\frontend-mobile-app\android\app\src\main\AndroidManifest.xml:3:5-76
-18-->E:\belajar\kkp\frontend-mobile-app\android\app\src\main\AndroidManifest.xml:3:22-74
+18-->E:\belajar\kkp_program\frontend_kkp\android\app\src\main\AndroidManifest.xml:3:5-76
+18-->E:\belajar\kkp_program\frontend_kkp\android\app\src\main\AndroidManifest.xml:3:22-74
 19    <uses-permission android:name="android.permission.VIBRATE" />
-19-->E:\belajar\kkp\frontend-mobile-app\android\app\src\main\AndroidManifest.xml:4:5-66
-19-->E:\belajar\kkp\frontend-mobile-app\android\app\src\main\AndroidManifest.xml:4:22-63
+19-->E:\belajar\kkp_program\frontend_kkp\android\app\src\main\AndroidManifest.xml:4:5-66
+19-->E:\belajar\kkp_program\frontend_kkp\android\app\src\main\AndroidManifest.xml:4:22-63
 20    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
-20-->E:\belajar\kkp\frontend-mobile-app\android\app\src\main\AndroidManifest.xml:5:5-81
-20-->E:\belajar\kkp\frontend-mobile-app\android\app\src\main\AndroidManifest.xml:5:22-78
+20-->E:\belajar\kkp_program\frontend_kkp\android\app\src\main\AndroidManifest.xml:5:5-81
+20-->E:\belajar\kkp_program\frontend_kkp\android\app\src\main\AndroidManifest.xml:5:22-78
 21    <!--
 22 Required to query activities that can process text, see:
 23         https://developer.android.com/training/package-visibility?hl=en and
@@ -38,22 +38,22 @@
 26         In particular, this is used by the Flutter engine in io.flutter.plugin.text.ProcessTextPlugin.
 27    -->
 28    <queries>
-28-->E:\belajar\kkp\frontend-mobile-app\android\app\src\main\AndroidManifest.xml:57:5-62:15
+28-->E:\belajar\kkp_program\frontend_kkp\android\app\src\main\AndroidManifest.xml:57:5-62:15
 29        <intent>
-29-->E:\belajar\kkp\frontend-mobile-app\android\app\src\main\AndroidManifest.xml:58:9-61:18
+29-->E:\belajar\kkp_program\frontend_kkp\android\app\src\main\AndroidManifest.xml:58:9-61:18
 30            <action android:name="android.intent.action.PROCESS_TEXT" />
-30-->E:\belajar\kkp\frontend-mobile-app\android\app\src\main\AndroidManifest.xml:59:13-72
-30-->E:\belajar\kkp\frontend-mobile-app\android\app\src\main\AndroidManifest.xml:59:21-70
+30-->E:\belajar\kkp_program\frontend_kkp\android\app\src\main\AndroidManifest.xml:59:13-72
+30-->E:\belajar\kkp_program\frontend_kkp\android\app\src\main\AndroidManifest.xml:59:21-70
 31
 32            <data android:mimeType="text/plain" />
-32-->E:\belajar\kkp\frontend-mobile-app\android\app\src\main\AndroidManifest.xml:60:13-50
-32-->E:\belajar\kkp\frontend-mobile-app\android\app\src\main\AndroidManifest.xml:60:19-48
+32-->E:\belajar\kkp_program\frontend_kkp\android\app\src\main\AndroidManifest.xml:60:13-50
+32-->E:\belajar\kkp_program\frontend_kkp\android\app\src\main\AndroidManifest.xml:60:19-48
 33        </intent>
 34    </queries>
 35
 36    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-36-->[:connectivity_plus] E:\belajar\kkp\frontend-mobile-app\build\connectivity_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-79
-36-->[:connectivity_plus] E:\belajar\kkp\frontend-mobile-app\build\connectivity_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:9:22-76
+36-->[:connectivity_plus] E:\belajar\kkp_program\frontend_kkp\build\connectivity_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-79
+36-->[:connectivity_plus] E:\belajar\kkp_program\frontend_kkp\build\connectivity_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:9:22-76
 37
 38    <permission
 38-->[androidx.core:core:1.13.1] C:\Users\irvan\.gradle\caches\transforms-3\fac84cd5ecf1ec88a8c98571217c9350\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47

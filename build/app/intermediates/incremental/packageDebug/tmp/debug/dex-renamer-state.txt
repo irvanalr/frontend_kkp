@@ -1,11 +1,11 @@
-#Fri Aug 23 03:29:23 WIB 2024
-base.0=E\:\\belajar\\kkp\\frontend-mobile-app\\build\\app\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
-base.1=E\:\\belajar\\kkp\\frontend-mobile-app\\build\\app\\intermediates\\dex\\debug\\mergeLibDexDebug\\0\\classes.dex
-base.2=E\:\\belajar\\kkp\\frontend-mobile-app\\build\\app\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.3=E\:\\belajar\\kkp\\frontend-mobile-app\\build\\app\\intermediates\\dex\\debug\\mergeProjectDexDebug\\1\\classes.dex
-base.4=E\:\\belajar\\kkp\\frontend-mobile-app\\build\\app\\intermediates\\dex\\debug\\mergeProjectDexDebug\\8\\classes.dex
-base.5=E\:\\belajar\\kkp\\frontend-mobile-app\\build\\app\\intermediates\\desugar_lib_dex\\debug\\classes1000.dex
-base.6=E\:\\belajar\\kkp\\frontend-mobile-app\\build\\app\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+#Thu Sep 05 16:33:02 WIB 2024
+base.0=E\:\\belajar\\kkp_program\\frontend_kkp\\build\\app\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.1=E\:\\belajar\\kkp_program\\frontend_kkp\\build\\app\\intermediates\\dex\\debug\\mergeLibDexDebug\\0\\classes.dex
+base.2=E\:\\belajar\\kkp_program\\frontend_kkp\\build\\app\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.3=E\:\\belajar\\kkp_program\\frontend_kkp\\build\\app\\intermediates\\dex\\debug\\mergeProjectDexDebug\\1\\classes.dex
+base.4=E\:\\belajar\\kkp_program\\frontend_kkp\\build\\app\\intermediates\\dex\\debug\\mergeProjectDexDebug\\8\\classes.dex
+base.5=E\:\\belajar\\kkp_program\\frontend_kkp\\build\\app\\intermediates\\desugar_lib_dex\\debug\\classes1000.dex
+base.6=E\:\\belajar\\kkp_program\\frontend_kkp\\build\\app\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=0/classes.dex

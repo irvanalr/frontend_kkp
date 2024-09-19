@@ -243,7 +243,7 @@
     },
     {
       "name": "flutter",
-      "rootUri": "file:///G:/flutter_windows_3.24.0-stable/flutter/packages/flutter",
+      "rootUri": "file:///C:/Users/irvan/flutter_windows_3.24.1-stable/flutter/packages/flutter",
       "packageUri": "lib/",
       "languageVersion": "3.3"
     },
@@ -255,7 +255,7 @@
     },
     {
       "name": "flutter_driver",
-      "rootUri": "file:///G:/flutter_windows_3.24.0-stable/flutter/packages/flutter_driver",
+      "rootUri": "file:///C:/Users/irvan/flutter_windows_3.24.1-stable/flutter/packages/flutter_driver",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
@@ -303,15 +303,21 @@
     },
     {
       "name": "flutter_test",
-      "rootUri": "file:///G:/flutter_windows_3.24.0-stable/flutter/packages/flutter_test",
+      "rootUri": "file:///C:/Users/irvan/flutter_windows_3.24.1-stable/flutter/packages/flutter_test",
       "packageUri": "lib/",
       "languageVersion": "3.3"
     },
     {
       "name": "flutter_web_plugins",
-      "rootUri": "file:///G:/flutter_windows_3.24.0-stable/flutter/packages/flutter_web_plugins",
+      "rootUri": "file:///C:/Users/irvan/flutter_windows_3.24.1-stable/flutter/packages/flutter_web_plugins",
       "packageUri": "lib/",
       "languageVersion": "3.2"
+    },
+    {
+      "name": "flutter_windowmanager",
+      "rootUri": "file:///C:/Users/irvan/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_windowmanager-0.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "fluttertoast",
@@ -327,7 +333,7 @@
     },
     {
       "name": "fuchsia_remote_debug_protocol",
-      "rootUri": "file:///G:/flutter_windows_3.24.0-stable/flutter/packages/fuchsia_remote_debug_protocol",
+      "rootUri": "file:///C:/Users/irvan/flutter_windows_3.24.1-stable/flutter/packages/fuchsia_remote_debug_protocol",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
@@ -381,7 +387,7 @@
     },
     {
       "name": "integration_test",
-      "rootUri": "file:///G:/flutter_windows_3.24.0-stable/flutter/packages/integration_test",
+      "rootUri": "file:///C:/Users/irvan/flutter_windows_3.24.1-stable/flutter/packages/integration_test",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
@@ -711,7 +717,7 @@
     },
     {
       "name": "sky_engine",
-      "rootUri": "file:///G:/flutter_windows_3.24.0-stable/flutter/bin/cache/pkg/sky_engine",
+      "rootUri": "file:///C:/Users/irvan/flutter_windows_3.24.1-stable/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
@@ -837,7 +843,7 @@
     },
     {
       "name": "vm_service",
-      "rootUri": "file:///C:/Users/irvan/AppData/Local/Pub/Cache/hosted/pub.dev/vm_service-14.2.4",
+      "rootUri": "file:///C:/Users/irvan/AppData/Local/Pub/Cache/hosted/pub.dev/vm_service-14.2.5",
       "packageUri": "lib/",
       "languageVersion": "3.3"
     },
@@ -908,10 +914,10 @@
       "languageVersion": "3.3"
     }
   ],
-  "generated": "2024-08-22T20:30:28.173256Z",
+  "generated": "2024-09-04T23:48:34.805647Z",
   "generator": "pub",
-  "generatorVersion": "3.5.0",
-  "flutterRoot": "file:///G:/flutter_windows_3.24.0-stable/flutter",
-  "flutterVersion": "3.24.0",
+  "generatorVersion": "3.5.1",
+  "flutterRoot": "file:///C:/Users/irvan/flutter_windows_3.24.1-stable/flutter",
+  "flutterVersion": "3.24.1",
   "pubCache": "file:///C:/Users/irvan/AppData/Local/Pub/Cache"
 }

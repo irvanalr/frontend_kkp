@@ -2548,6 +2548,25 @@
                     }
                 },
                 {
+                    "source": "E:\\belajar\\kkp_program\\frontend_kkp\\build\\local_auth_android\\intermediates\\packaged_res\\debug\\values\\values.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "55,100,144,190,238",
+                        "endLines": "2,3,4,5,11",
+                        "endColumns": "44,43,45,47,10",
+                        "endOffsets": "95,139,185,233,533"
+                    },
+                    "to": {
+                        "startLines": "108,127,260,261,416",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "4224,5587,14702,14748,24547",
+                        "endLines": "108,127,260,261,421",
+                        "endColumns": "44,43,45,47,10",
+                        "endOffsets": "4264,5626,14743,14791,24842"
+                    }
+                },
+                {
                     "source": "C:\\Users\\irvan\\.gradle\\caches\\transforms-3\\72c3b50464ef6083cf89f6c034060f28\\transformed\\biometric-1.1.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,6,8,11,15,34,35,36,37,38,39,40,41,42,43,44,45,46,47",
@@ -2675,7 +2694,24 @@
                     }
                 },
                 {
-                    "source": "E:\\belajar\\kkp\\frontend-mobile-app\\android\\app\\src\\main\\res\\values\\styles.xml",
+                    "source": "C:\\Users\\irvan\\.gradle\\caches\\transforms-3\\f0e2a8f4847187f7a6be5166c22676ab\\transformed\\media-1.1.0\\res\\values\\values.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,144,215,288,341,394,447,500,560,626,748,809,875",
+                        "endColumns": "88,70,72,52,52,52,52,59,65,121,60,65,66",
+                        "endOffsets": "139,210,283,336,389,442,495,555,621,743,804,870,937"
+                    },
+                    "to": {
+                        "startLines": "144,149,155,277,278,279,280,362,1772,1774,1775,1780,1782",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "6570,6959,7362,15774,15827,15880,15933,20525,114241,114417,114539,114801,114996",
+                        "endColumns": "88,70,72,52,52,52,52,59,65,121,60,65,66",
+                        "endOffsets": "6654,7025,7430,15822,15875,15928,15981,20580,114302,114534,114595,114862,115058"
+                    }
+                },
+                {
+                    "source": "E:\\belajar\\kkp_program\\frontend_kkp\\android\\app\\src\\main\\res\\values\\styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
@@ -2691,23 +2727,6 @@
                         "endLines": "1492,1495",
                         "endColumns": "12,12",
                         "endOffsets": "92830,92999"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\irvan\\.gradle\\caches\\transforms-3\\f0e2a8f4847187f7a6be5166c22676ab\\transformed\\media-1.1.0\\res\\values\\values.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,144,215,288,341,394,447,500,560,626,748,809,875",
-                        "endColumns": "88,70,72,52,52,52,52,59,65,121,60,65,66",
-                        "endOffsets": "139,210,283,336,389,442,495,555,621,743,804,870,937"
-                    },
-                    "to": {
-                        "startLines": "144,149,155,277,278,279,280,362,1772,1774,1775,1780,1782",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "6570,6959,7362,15774,15827,15880,15933,20525,114241,114417,114539,114801,114996",
-                        "endColumns": "88,70,72,52,52,52,52,59,65,121,60,65,66",
-                        "endOffsets": "6654,7025,7430,15822,15875,15928,15981,20580,114302,114534,114595,114862,115058"
                     }
                 },
                 {
@@ -2744,25 +2763,6 @@
                         "endLines": "2068,2074,2084,3057,3061",
                         "endColumns": "24,24,24,24,24",
                         "endOffsets": "131310,131488,131772,164119,164246"
-                    }
-                },
-                {
-                    "source": "E:\\belajar\\kkp\\frontend-mobile-app\\build\\local_auth_android\\intermediates\\packaged_res\\debug\\values\\values.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6",
-                        "startColumns": "4,4,4,4,4",
-                        "startOffsets": "55,100,144,190,238",
-                        "endLines": "2,3,4,5,11",
-                        "endColumns": "44,43,45,47,10",
-                        "endOffsets": "95,139,185,233,533"
-                    },
-                    "to": {
-                        "startLines": "108,127,260,261,416",
-                        "startColumns": "4,4,4,4,4",
-                        "startOffsets": "4224,5587,14702,14748,24547",
-                        "endLines": "108,127,260,261,421",
-                        "endColumns": "44,43,45,47,10",
-                        "endOffsets": "4264,5626,14743,14791,24842"
                     }
                 }
             ]
@@ -3594,24 +3594,7 @@
             "outputFile": "com.example.febankflutter.app-merged_res-31:/values-night-v8_values-night-v8.arsc.flat",
             "map": [
                 {
-                    "source": "C:\\Users\\irvan\\.gradle\\caches\\transforms-3\\42fc4732415ef79ec3f5da27dd1c9000\\transformed\\appcompat-1.2.0\\res\\values-night-v8\\values-night-v8.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,125,209,293,389,491,593,687",
-                        "endColumns": "69,83,83,95,101,101,93,88",
-                        "endOffsets": "120,204,288,384,486,588,682,771"
-                    },
-                    "to": {
-                        "startLines": "9,10,11,12,13,14,15,16",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "405,475,559,643,739,841,943,1037",
-                        "endColumns": "69,83,83,95,101,101,93,88",
-                        "endOffsets": "470,554,638,734,836,938,1032,1121"
-                    }
-                },
-                {
-                    "source": "E:\\belajar\\kkp\\frontend-mobile-app\\android\\app\\src\\main\\res\\values-night\\styles.xml",
+                    "source": "E:\\belajar\\kkp_program\\frontend_kkp\\android\\app\\src\\main\\res\\values-night\\styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
@@ -3627,6 +3610,23 @@
                         "endLines": "5,8",
                         "endColumns": "12,12",
                         "endOffsets": "231,400"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\irvan\\.gradle\\caches\\transforms-3\\42fc4732415ef79ec3f5da27dd1c9000\\transformed\\appcompat-1.2.0\\res\\values-night-v8\\values-night-v8.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,125,209,293,389,491,593,687",
+                        "endColumns": "69,83,83,95,101,101,93,88",
+                        "endOffsets": "120,204,288,384,486,588,682,771"
+                    },
+                    "to": {
+                        "startLines": "9,10,11,12,13,14,15,16",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "405,475,559,643,739,841,943,1037",
+                        "endColumns": "69,83,83,95,101,101,93,88",
+                        "endOffsets": "470,554,638,734,836,938,1032,1121"
                     }
                 }
             ]

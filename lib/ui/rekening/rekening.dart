@@ -61,14 +61,7 @@ class _RekeningState extends State<Rekening> {
       statusBarColor: LightAndDarkMode.primaryColor(context),
       systemNavigationBarColor: LightAndDarkMode.bottomNavBar(context),
     ));
-    return PopScope<Object?>(
-      canPop: false,
-      onPopInvokedWithResult: (didPop, result) async {
-        if (!didPop) {
-          Navigator.of(context).pop();
-        }
-      },
-      child: DefaultTabController(
+    return DefaultTabController(
         length: 3,
         child: Scaffold(
           appBar: AppBar(
@@ -243,7 +236,6 @@ class _RekeningState extends State<Rekening> {
             ],
           ),
         ),
-      ),
     );
   }
 }

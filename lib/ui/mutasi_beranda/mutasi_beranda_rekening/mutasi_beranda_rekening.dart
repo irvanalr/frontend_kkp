@@ -41,6 +41,7 @@ class _MutasiBerandaRekeningState extends State<MutasiBerandaRekening> {
         appBar: AppBar(
           backgroundColor: LightAndDarkMode.primaryColor(context),
           leading: IconButton(
+            key: const Key('kembali appbar'),
             icon: const Icon(
               Icons.arrow_back,
               color: Colors.white,

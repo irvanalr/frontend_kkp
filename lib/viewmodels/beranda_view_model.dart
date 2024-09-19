@@ -22,8 +22,7 @@ class BerandaViewModel {
   final String lgnNmp1 = dotenv.get('LOGINNAMAPENGGUNASECRETKEY');
   final String lgnNmp2 = dotenv.get('LOGINNAMAPENGGUNASHAREDPREFERENCES');
 
-  BerandaViewModel({required this.notifyListeners})
-      : berandaModel = BerandaModel();
+  BerandaViewModel({required this.notifyListeners}) : berandaModel = BerandaModel();
 
   Future<void> berandaCardInformasiRekeningUtama() async {
     try {
@@ -39,7 +38,7 @@ class BerandaViewModel {
         berandaModel.status = responseBody['status'];
         berandaModel.message = responseBody['message'];
         berandaModel.registration = responseBody['registration'];
-        berandaModel.productName = responseBody['prouctName'];
+        berandaModel.productName = responseBody['productName'];
         berandaModel.code = responseBody['code'];
         berandaModel.name = responseBody['name'];
         berandaModel.balance = responseBody['balance'];
@@ -78,6 +77,7 @@ class BerandaViewModel {
       if (parts.length > 1) {
         valueFormatted += ',${parts[1]}';
       }
+
       return valueFormatted;
     } catch (e) {
       return '0';

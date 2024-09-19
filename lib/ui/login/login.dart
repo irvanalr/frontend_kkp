@@ -43,19 +43,10 @@ class _LoginState extends State<Login> {
   final String lgnKts2 = dotenv.get('LOGINKATASANDISHAREDPREFERENCES');
   late Timer _timer;
 
-  String loremIpsumText1 = 'Lorem ipsum dolor sit amet';
-  String loremIpsumText2 = '''
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-Sed euismod ultrices massa, et feugiat ipsum consequat 
-id. Cras at turpis sem. Nullam molestie volutpat sapien, 
-id feugiat orci iaculis nec. Sed auctor, erat in 
-eleifend aliquet, nisl diam viverra velit, nec 
-condimentum nisi magna non tellus. 
-  ''';
-
   @override
   void initState() {
     super.initState();
+    loginViewModel.clearData();
 
     usernameController =
       TextEditingController(text: loginViewModel.namaPengguna)
@@ -210,12 +201,13 @@ condimentum nisi magna non tellus.
     _timer.cancel();
     usernameController.dispose();
     passwordController.dispose();
+    loginViewModel.clearData();
   }
 
-  Future<String> fakeAPI() async {
-    await Future.delayed(const Duration(milliseconds: 1500));
-    return 'Data Loaded';
-  }
+  // Future<String> fakeAPI() async {
+  //   await Future.delayed(const Duration(milliseconds: 1500));
+  //   return 'Data Loaded';
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -322,8 +314,7 @@ condimentum nisi magna non tellus.
                       key: const Key('sizedBoxKedua'),
                       width: ResponsiveLogin.loginShapeCarouselWidth,
                       height: ResponsiveLogin.loginShapeCarouselHeight,
-                      child: CarouselLogin(
-                          images: loginViewModel.loginModel.bannerLogin),
+                      child: CarouselLogin(images: loginViewModel.loginModel.bannerLogin),
                     ),
                   ),
                   Padding(

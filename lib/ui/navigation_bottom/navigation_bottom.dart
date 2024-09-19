@@ -28,38 +28,7 @@ class _NavigationBarCustomeState extends State<NavigationBarCustome> {
   void initState() {
     super.initState();
     controller = Get.put(NavigationController());
-
-    // HardwareKeyboard.instance.addHandler(_handleKeyEvent);
   }
-
-  // @override
-  // void dispose() {
-  //   // Hapus listener saat widget dihapus
-  //   HardwareKeyboard.instance.removeHandler(_handleKeyEvent);
-  //   super.dispose();
-  // }
-
-  // cek validasi tombol
-  // bool _handleKeyEvent(KeyEvent event) {
-  //   if (event is KeyDownEvent) {
-  //     if (event.logicalKey == LogicalKeyboardKey.goBack) {
-  //       // Lakukan sesuatu ketika tombol kembali ditekan
-  //       logger.i('Tombol kembali ditekan');
-  //       return true; // Kembalikan true jika event berhasil ditangani
-  //     }
-  //   }
-  //   return false; // Kembalikan false jika event tidak ditangani
-  // }
-
-  // cek tombol android
-  // bool _handleKeyEvent(KeyEvent event) {
-  //   if (event is KeyDownEvent) {
-  //     // Lakukan sesuatu ketika key event terjadi
-  //     logger.i('Key event: ${event.logicalKey.debugName}');
-  //     return true; // Kembalikan true jika event berhasil ditangani
-  //   }
-  //   return false; // Kembalikan false jika event tidak ditangani
-  // }
 
   @override
   Widget build(BuildContext context) {
@@ -71,9 +40,11 @@ class _NavigationBarCustomeState extends State<NavigationBarCustome> {
     ResponsiveNavigationBottomBar.init(context);
     return PopScope<Object?>(
       canPop: false,
-      onPopInvokedWithResult: (didPop, result) async {
-        if (didPop) return;
-        await ExitApp.handlePop(context);
+      onPopInvokedWithResult: (bool didPop, Object? result) async {
+        if (didPop) {
+          return;
+        }
+        ExitApp.handlePop(context);
       },
       child: Scaffold(
         bottomNavigationBar: Obx(

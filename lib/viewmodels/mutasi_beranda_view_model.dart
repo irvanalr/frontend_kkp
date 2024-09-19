@@ -24,8 +24,7 @@ class MutasiBerandaViewModel {
   final String lgnNmp1 = dotenv.get('LOGINNAMAPENGGUNASECRETKEY');
   final String lgnNmp2 = dotenv.get('LOGINNAMAPENGGUNASHAREDPREFERENCES');
 
-  MutasiBerandaViewModel({required this.notifyListeners})
-      : mutasiBerandaModel =
+  MutasiBerandaViewModel({required this.notifyListeners}) : mutasiBerandaModel =
   MutasiBerandaModel() {
     // Inisialisasi format tanggal untuk bahasa Indonesia
     initializeDateFormatting('id_ID', null).then((_) {
@@ -77,6 +76,7 @@ class MutasiBerandaViewModel {
       updateSelectedTransaksi(combinedValue);
     }
   }
+
   Future<void> getTransaksi(Function(String, String, String, String) apiMethod) async {
     try {
       String apiKeyToken = await loginViewModel.getValue(lgnAtkn1, lgnAtkn2);
@@ -165,19 +165,6 @@ class MutasiBerandaViewModel {
         mutasiBerandaModel.status = responseBody['status'];
         mutasiBerandaModel.message = responseBody['message'];
         mutasiBerandaModel.code = code;
-
-        // debug
-        // logger.i('transactions date = ${mutasiBerandaModel.transactions[0].date}');
-        // logger.i('transactions code = ${mutasiBerandaModel.transactions[0].code}');
-        // logger.i('transactions description = ${mutasiBerandaModel.transactions[0].description}');
-        // logger.i('transactions direction = ${mutasiBerandaModel.transactions[0].direction}');
-        // logger.i('transactions value1 = ${mutasiBerandaModel.transactions[0].value1}');
-        // logger.i('transactions endValue1 = ${mutasiBerandaModel.transactions[0].endValue1}');
-        // logger.i('timestamp = ${mutasiBerandaModel.timestamp}');
-        // logger.i('status = ${mutasiBerandaModel.status}');
-        // logger.i('message = ${mutasiBerandaModel.message}');
-        // logger.i('name = ${mutasiBerandaModel.name}');
-        // logger.i('code = ${mutasiBerandaModel.code}');
       } else {
         // Kosongkan data yang sebelumnya terisi
         mutasiBerandaModel.transactions = [];
@@ -245,8 +232,7 @@ class MutasiBerandaViewModel {
   }
 
   Future<void> getFutureForMutasi() async {
-    String selectedDate =
-        "${mutasiBerandaModel.dateNow.day}-${mutasiBerandaModel.dateNow.month}-${mutasiBerandaModel.dateNow.year}";
+    String selectedDate = "${mutasiBerandaModel.dateNow.day}-${mutasiBerandaModel.dateNow.month}-${mutasiBerandaModel.dateNow.year}";
     if (mutasiBerandaModel.transaksi == '5 Transaksi terakhir') {
       await list5TransaksiTabungan();
     } else if (mutasiBerandaModel.transaksi == '10 Transaksi terakhir') {
@@ -290,8 +276,6 @@ class MutasiBerandaViewModel {
         mutasiBerandaModel.timestampInformasiRekening = responseBody['timestamp'];
         mutasiBerandaModel.statusInformasiRekening = responseBody['status'];
         mutasiBerandaModel.messageInformasiRekening = responseBody['message'];
-        // logger.i('informasiRekening saving name : ${mutasiBerandaModel.savings[0].name}');
-        // logger.i('informasiRekening saving productScheme : ${mutasiBerandaModel.savings[0].productScheme}');
       } else {
         throw Exception('Informasi rekening failed to load');
       }

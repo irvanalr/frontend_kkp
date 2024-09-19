@@ -20,8 +20,7 @@ class RekeningCardSimpananViewModel {
   final String lgnNmp1 = dotenv.get('LOGINNAMAPENGGUNASECRETKEY');
   final String lgnNmp2 = dotenv.get('LOGINNAMAPENGGUNASHAREDPREFERENCES');
 
-  RekeningCardSimpananViewModel({required this.notifyListeners})
-      : rekeningCardSimpananModel = RekeningCardSimpananModel();
+  RekeningCardSimpananViewModel({required this.notifyListeners}) : rekeningCardSimpananModel = RekeningCardSimpananModel();
 
   Future<void> listTabunganSimpanan() async {
     try {
@@ -83,6 +82,7 @@ class RekeningCardSimpananViewModel {
       if (parts.length > 1) {
         valueFormatted += ',${parts[1]}';
       }
+
       return valueFormatted;
     } catch (e) {
       return '0';

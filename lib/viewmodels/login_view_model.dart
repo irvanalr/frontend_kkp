@@ -210,4 +210,52 @@ class LoginViewModel extends ChangeNotifier {
         'Anda telah Logout di jam $jam, Tanggal $tanggal',
         platformChannelSpecifics);
   }
+
+  /// Function to clear/reset the model data
+  void clearData() {
+    loginModel.kataSandiVisible = false;
+    loginModel.isButtonEnabled = false;
+    loginModel.isButtonGantiAkunEnabled = true;
+    loginModel.isConnected = false;
+    loginModel.informationMessageOverlayRegistrasi = false;
+    loginModel.namaPengguna = '';
+    loginModel.kataSandi = '';
+
+    // Cancel and clear any active connectivity subscriptions
+    loginModel.connectivitySubscription?.cancel();
+    loginModel.connectivitySubscription = null;
+
+    // Optionally, you may want to reset or reinitialize notifications
+    loginModel.flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
+
+    // Reset lists to their initial values
+    loginModel.loginPngAsset = [
+      'assets/png/registration.png',
+      'assets/png/transfer/antar-koperasi.png',
+      'assets/png/bayar/paket-data.png',
+      'assets/png/bayar/tagihan-pln.png',
+    ];
+
+    loginModel.loginTextList = [
+      'Registrasi',
+      'Antar\nKoperasi',
+      'Paket\ndata',
+      'Tagihan\nPLN',
+    ];
+
+    loginModel.bannerLogin = [
+      'assets/png/haji1.png',
+      'assets/png/haji1.png',
+      'assets/png/haji1.png',
+    ];
+
+    loginModel.isAuthenticating = false;
+    loginModel.fingerprintEnabled = false;
+
+    // Reset API-related data
+    loginModel.timeStamp = '';
+    loginModel.status = 404;
+    loginModel.message = 'Maaf server sedang dalam kendala, silahkan tutup applikasi dan coba lagi nanti!!';
+    loginModel.token = '';
+  }
 }

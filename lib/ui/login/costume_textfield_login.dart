@@ -764,7 +764,6 @@ class _CostumeTextFieldLoginState extends State<CostumeTextFieldLogin> {
                     color: LightAndDarkMode.primaryColor(context),
                   ),
                   child: TextButton(
-                    key: widget.keyLoginButton,
                     style: TextButton.styleFrom(
                       shape: const RoundedRectangleBorder(
                           borderRadius: BorderRadius.zero

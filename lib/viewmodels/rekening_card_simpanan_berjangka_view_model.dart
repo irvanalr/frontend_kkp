@@ -59,9 +59,10 @@ class RekeningCardSimpananBerjangkaViewModel {
   String formatDate(String date) {
     List<String> parts = date.split('-');
     if (parts.length == 3) {
+      /// tanggal-bulan-tahun
       return '${parts[2]}-${parts[1]}-${parts[0]}';
     } else {
-      return date; // Return the original date if it doesn't match the expected format
+      return date;
     }
   }
 

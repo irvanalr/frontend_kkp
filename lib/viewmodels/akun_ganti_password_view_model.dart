@@ -11,22 +11,18 @@ import 'package:logger/logger.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class AkunGantiPasswordViewModel extends ChangeNotifier {
-  final AkunGantiPasswordModel akunGantiPasswordModel =
-      AkunGantiPasswordModel();
+  final AkunGantiPasswordModel akunGantiPasswordModel = AkunGantiPasswordModel();
   final LoginViewModel loginViewModel = LoginViewModel();
   ApiServices apiServices = ApiMain();
   final logger = Logger();
 
   String get kataSandiLama => akunGantiPasswordModel.kataSandiLama;
   String get kataSandiBaru => akunGantiPasswordModel.kataSandiBaru;
-  String get konfirmasiKataSandiBaru =>
-      akunGantiPasswordModel.konfirmasiKataSandiBaru;
-  bool get toggleButtonKataSandiLamaVisibility =>
-      akunGantiPasswordModel.toggleButtonKataSandiLamaVisibility;
-  bool get toggleButtonKataSandiBaruVisibility =>
-      akunGantiPasswordModel.toggleButtonKataSandiBaruVisibility;
-  bool get toggleButtonKonfirmasiKataSandiBaruVisibility =>
-      akunGantiPasswordModel.toggleButtonKonfirmasiKataSandiBaruVisibility;
+  String get konfirmasiKataSandiBaru => akunGantiPasswordModel.konfirmasiKataSandiBaru;
+  bool get toggleButtonKataSandiLamaVisibility => akunGantiPasswordModel.toggleButtonKataSandiLamaVisibility;
+  bool get toggleButtonKataSandiBaruVisibility => akunGantiPasswordModel.toggleButtonKataSandiBaruVisibility;
+  bool get toggleButtonKonfirmasiKataSandiBaruVisibility => akunGantiPasswordModel.toggleButtonKonfirmasiKataSandiBaruVisibility;
+
   final String api1 = dotenv.get('APITOKENSECRETKEY');
   final String api2 = dotenv.get('APITOKENSHAREDPREFERENCES');
   final String lgnTkn1 = dotenv.get('LOGINTOKENSECRETKEY');
